@@ -274,8 +274,8 @@ h2 {
 form {
   background: var(--surface);
   border: 1px solid #cfcec5;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 12px;
+  padding: 16px;
   box-shadow: 0 2px 8px #3d392b08;
 }
 form:focus-within {
