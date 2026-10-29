@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tandem</title>
+    <meta name="description" content="A conversation with Tandem." />
+    <meta name="theme-color" content="#f5f4ed" />
+    <link rel="icon" href="./logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="chat">
+      <header>
+        <div class="brand">
+          <img
+            class="brand-mark"
+            src="./logo.svg"
+            alt=""
+            width="36"
+            height="36"
+          />
+          <h1>Tandem</h1>
+          <div
+            id="health"
+            class="health"
+            role="status"
+            aria-live="polite"
+            title="API health status"
+          >
+            <span class="dot" aria-hidden="true"></span
+            ><span id="health-label" class="sr-only">Checking</span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button id="new-chat" class="new-chat" type="button">
+            <svg class="new-chat-icon" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 3v10M3 8h10" />
+            </svg>
+            <span>New chat</span>
+          </button>
+        </div>
+      </header>
+      <section
+        id="messages"
+        class="messages"
+        aria-label="Conversation"
+        aria-busy="false"
+      >
+        <div id="empty" class="empty"><h2>What's on your mind?</h2></div>
+      </section>
+      <div
+        id="announcement"
+        class="sr-only"
+        role="status"
+        aria-live="polite"
+      ></div>
+      <form id="chat-form">
+        <label class="sr-only" for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          aria-describedby="send-shortcut"
+          aria-keyshortcuts="Control+Enter Meta+Enter"
+          placeholder="Message Tandem..."
+          rows="3"
+          required
+          autofocus
+        ></textarea>
+        <div class="composer-footer">
+          <span class="model">gpt-oss-20b</span>
+          <div class="send-actions">
+            <span id="send-shortcut" class="shortcut">Ctrl / Cmd + Enter</span>
+            <button id="send" type="submit">Send</button>
+          </div>
+        </div>
+      </form>
+      <p id="error" role="alert" hidden></p>
+    </main>
+  </body>
+</html>
