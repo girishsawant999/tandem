@@ -294,7 +294,7 @@ textarea {
   font: inherit;
   font-size: 16px;
   color: inherit;
-  background: transparent;
+  background: #f5f4ed;
 }
 textarea::placeholder {
   color: var(--muted);
